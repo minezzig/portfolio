@@ -80,7 +80,7 @@ logo {
 }
 
 #hamburger {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #hamburger div {
@@ -88,7 +88,6 @@ logo {
   height: 2px;
   background-color: black;
   margin: 5px;
-
 }
 
 #close {
@@ -98,57 +97,70 @@ logo {
   cursor: pointer;
 }
 
-
 /* --------------- hero ------------- */
-#hero {
+#hero .container {
   height: 100vh;
+  width: 100%;
   background: #90adc6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
 .title {
+  height: 100%;
+  width: 100%;
   color: #ffffff;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.rotate-words {
-  display: inline;
-  margin-left: 10px;
+.title .text h1 {
+  line-height: 1;
+  font-size: 128px;
+  font-family: "Fjalla One", sans-serif;
+  text-shadow: 5px 5px black;
+
+  transition: transform 0.5s ease-in-out, letter-spacing 0.5s ease-in-out;
 }
 
-.rotate-words span {
-  font-size: 36px;
-  width: max-content;
-  position: absolute;
-  background-color: lightcoral;
-  border: 2px solid black;
-  border-radius: 10px;
-  box-shadow: 5px 5px black;
-  padding-inline: 10px;
-  opacity: 0;
-  transform-origin: 10% 75%;
-  animation: rotateWords 12s var(--d) linear infinite;
+.title .text:hover h1 {
+  transform: translate(-5px, -5px);
+  letter-spacing: 5px;
 }
+.title .text p {
+  color: black;
+  margin-left: 5px;
+  transition: transform 0.5s ease-in-out;
+}
+.title .text:hover p {
+  transform: translateX(37%);
+}
+.title .art {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  background-color: #9dd1c0;
+ animation: rotate 3s infinite
+}
+@keyframes rotate {
+ 0%,100% {
+    transform: rotate(-90deg);
+    border-radius: 50%;
+    background-color: #9dd1c0;
+  } 
+  50% {
+    transform: rotate(90deg);
+    border-radius: 10%;
+    background-color: lightcoral;
+  }
+}
+.title .art:hover {
+background-color: red;
+ }
+  
 
-@keyframes rotateWords {
-  5% {
-    opacity: 1;
-  }
-  10%,
-  20% {
-    opacity: 1;
-    transform: rotate(3deg);
-  }
-  15% {
-    transform: rotate(-1deg);
-  }
-  25% {
-    opacity: 0;
-    transform: translateY(90px) rotate(10deg);
-  }
-}
+
+
 /* --------------- about ------------- */
 #about {
   background: #9dd1c0;
@@ -212,7 +224,7 @@ h2 {
   width: 100px;
   background-color: red;
 
-  transition: .5s ease
+  transition: 0.5s ease;
 }
 
 .card:hover::before {
@@ -302,23 +314,32 @@ button {
   box-shadow: 5px 5px black;
 }
 
-button:hover,
-button:active {
+button:hover {
   background-color: white;
   color: #90adc6;
   transform: translate(2px, 2px);
   box-shadow: 3px 3px black;
 }
 
+button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0 0 black;
+}
 /* --------- footer ---------*/
 
 footer {
   background-color: black;
   color: white;
-  height: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* media queries */
+@media all and (min-width: 900px) {
+  .title {flex-direction: row}
+}
 
 @media all and (min-width: 700px) {
   logo {

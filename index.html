@@ -24,21 +24,23 @@
           <li><a href="#contact">contact</a></li>
           <span id="close" onclick="closeMenu()">X</span>
         </ul>
-        <span id="hamburger" onclick="openMenu()"><div></div><div></div><div></div></span>
+        <span id="hamburger" onclick="openMenu()"
+          ><div></div>
+          <div></div>
+          <div></div
+        ></span>
       </nav>
     </header>
     <!-- --------------hero --------------->
     <div id="hero">
       <div class="container">
-        <h1 class="title">
-          hello there, <br />i'm greg... <br />
-
-          <div class="rotate-words">
-            <span style="--d: 0s">web developer</span>
-            <span style="--d: 4s">educator</span>
-            <span style="--d: 8s">world traveler</span>
+        <div class="title">
+          <div class="text">
+            <h1>greg <br />minezzi</h1>
+            <p>developer | educator | traveler</p>
           </div>
-        </h1>
+          <div class="art"></div>
+        </div>
       </div>
     </div>
 
@@ -80,7 +82,11 @@
         <div class="contact-section">
           <h2>CONTACT</h2>
           <div class="login-box">
-            <form action="mailto:gregminezzi@gmail.com" enctype="text/plain" onsubmit="{alert(Thanks)}">
+            <form
+              action="mailto:gregminezzi@gmail.com"
+              enctype="text/plain"
+              onsubmit="{alert(Thanks)}"
+            >
               <div class="user-box">
                 <input type="text" name="name" required=" " />
                 <label>name</label>
@@ -101,7 +107,7 @@
       </div>
     </div>
 
-    <footer>BYE!</footer>
+    <footer>©minezzi 2021</footer>
   </body>
   <script type="text/javascript" src="script.js"></script>
 </html>
