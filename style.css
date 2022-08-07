@@ -116,7 +116,7 @@ logo {
 
 .title .text h1 {
   line-height: 1;
-  font-size: 128px;
+  font-size: 100px;
   font-family: "Fjalla One", sans-serif;
   text-shadow: 5px 5px black;
 
@@ -133,21 +133,22 @@ logo {
   transition: transform 0.5s ease-in-out;
 }
 .title .text:hover p {
-  transform: translateX(37%);
+  transform: translateX(21%);
 }
 .title .art {
-  height: 250px;
-  width: 250px;
+  height: 175px;
+  width: 175px;
   border-radius: 50%;
   background-color: #9dd1c0;
- animation: rotate 3s infinite
+  animation: rotate 3s infinite;
 }
 @keyframes rotate {
- 0%,100% {
+  0%,
+  100% {
     transform: rotate(-90deg);
     border-radius: 50%;
     background-color: #9dd1c0;
-  } 
+  }
   50% {
     transform: rotate(90deg);
     border-radius: 10%;
@@ -155,11 +156,8 @@ logo {
   }
 }
 .title .art:hover {
-background-color: red;
- }
-  
-
-
+  background-color: red;
+}
 
 /* --------------- about ------------- */
 #about {
@@ -338,7 +336,9 @@ footer {
 
 /* media queries */
 @media all and (min-width: 900px) {
-  .title {flex-direction: row}
+  .title {
+    flex-direction: row;
+  }
 }
 
 @media all and (min-width: 700px) {
@@ -362,4 +362,18 @@ footer {
   nav span {
     display: none;
   }
+
+  .title .text h1 {
+    font-size: 128px;
+  }
+
+  .title .text:hover p {
+    transform: translateX(37%);
+  }
+
+  .title .art {
+    height: 250px;
+    width: 250px;
+  }
+
 }
