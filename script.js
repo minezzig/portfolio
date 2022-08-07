@@ -11,19 +11,19 @@ function closeMenu() {
 
 const projectsList = [
   {
-    name: "tic tac toe",
+    name: "one",
     stack: "javascript",
-    description: "This is an applicatoin that show how i can do something",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vel minima culpa nisi veniam quis repellendus mollitia sapiente cumque! Veniam repellendus ipsum hic iste fugiat accusantium odit quaerat quidem ipsa!",
   },
   {
-    name: "hangman",
+    name: "two",
     stack: "react",
-    description: "Another applicatoin that shows something",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vel minima culpa nisi veniam quis repellendus mollitia sapiente cumque! Veniam repellendus ipsum hic iste fugiat accusantium odit quaerat quidem ipsa!",
   },
   {
-    name: "hangman",
-    stack: "react",
-    description: "Another applicatoin that shows something",
+    name: "three",
+    stack: "css",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vel minima culpa nisi veniam quis repellendus mollitia sapiente cumque! Veniam repellendus ipsum hic iste fugiat accusantium odit quaerat quidem ipsa!",
   },
 ];
 
@@ -31,8 +31,8 @@ const content = projectsList.map((project) => {
   const { name, stack, description } = project;
   return ` 
     <div class="card">
-      <h2>${name}</h2>
-      <h3>${stack}</h3>
+      <h3>${name}</h3>
+      <p>${stack}</p>
       <p>${description}</p>
     </div>
     `;

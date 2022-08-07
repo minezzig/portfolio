@@ -11,8 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Fjalla+One&family=Fredericka+the+Great&family=Londrina+Shadow&family=Montserrat&family=Nixie+One&family=Poiret+One&family=Poppins&display=swap"
       rel="stylesheet"
     />
-
-    <title>minezzi</title>
+    <script
+      src="https://kit.fontawesome.com/c82e315a12.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>minezzi web developer</title>
   </head>
   <body>
     <header>
@@ -21,6 +24,7 @@
         <ul class="nav-links" id="menu">
           <li><a href="#about">about</a></li>
           <li><a href="#projects">projects</a></li>
+          <li><a href="#resume">resume</a></li>
           <li><a href="#contact">contact</a></li>
           <span id="close" onclick="closeMenu()">X</span>
         </ul>
@@ -39,7 +43,10 @@
             <h1>greg <br />minezzi</h1>
             <p>developer | educator | traveler</p>
           </div>
-          <div class="art"></div>
+          <div class="art-container">
+            <div class="art"></div>
+            <span>hello.</span>
+          </div>
         </div>
       </div>
     </div>
@@ -81,27 +88,35 @@
       <div class="container">
         <div class="contact-section">
           <h2>CONTACT</h2>
-          <div class="login-box">
-            <form
-              action="mailto:gregminezzi@gmail.com"
-              enctype="text/plain"
-              onsubmit="{alert(Thanks)}"
-            >
-              <div class="user-box">
-                <input type="text" name="name" required=" " />
-                <label>name</label>
-              </div>
-              <div class="user-box">
-                <input type="text" name="email" required=" " />
-                <label>email</label>
-              </div>
-              <div class="user-box">
-                <textarea name="comment" required=" " rows="1"></textarea>
-                <label>comment</label>
-              </div>
-              <button type="submit">Send</button>
-              <button type="reset">Clear</button>
-            </form>
+
+          <div class="contact-container">
+            <div class="login-box">
+              <form
+                action="mailto:gregminezzi@gmail.com"
+                enctype="text/plain"
+                onsubmit="{alert(Thanks)}"
+              >
+                <div class="user-box">
+                  <input type="text" name="name" required=" " />
+                  <label>name</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="email" required=" " />
+                  <label>email</label>
+                </div>
+                <div class="user-box">
+                  <textarea name="comment" required=" " rows="1"></textarea>
+                  <label>comment</label>
+                </div>
+                <button type="submit">Send</button>
+                <button type="reset">Clear</button>
+              </form>
+            </div>
+            <div class="contact-links">
+              <p>Connect with me!</p>
+              <a href="https://github.com/minezzig" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+              <a href="https://www.linkedin.com/in/greg-minezzi/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -111,3 +126,4 @@
   </body>
   <script type="text/javascript" src="script.js"></script>
 </html>
+
