@@ -91,7 +91,10 @@
 
           <div class="contact-container">
             <div class="login-box">
-              <form action="formHandler.php">
+              <form
+                action="https://formsubmit.co/9d507b1f618bc883166348781d2fa68b"
+                method="POST"
+              >
                 <div class="user-box">
                   <input type="text" name="name" required=" " />
                   <label>name</label>
@@ -104,6 +107,10 @@
                   <textarea name="comment" required=" " rows="1"></textarea>
                   <label>comment</label>
                 </div>
+                <input type="hidden" name="_next" value="index.html" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_subject" value="New submission!" />
                 <button type="submit">Send</button>
                 <button type="reset">Clear</button>
               </form>
