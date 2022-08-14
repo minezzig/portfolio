@@ -238,11 +238,40 @@ h2 {
   overflow: hidden;
 }
 
+.card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: lightcoral;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  opacity: 0;
+  transition: all 0.25s ease-in-out, opacity;
+}
+
+.card:hover::after {
+  bottom: 0%;
+  opacity: 0.5;
+  color: white;
+  background: linear-gradient(lightcoral, white);
+}
+
 .card h3 {
   color: black;
+  letter-spacing: 0.1em;
   text-shadow: 2px 2px white, 3px 3px black;
   font-size: 28px;
+}
 
+.card i {
+  color: lightcoral;
+  padding: 10px 5px;
+}
+
+.card a {
+  text-decoration: none;
+  color: lightcoral;
 }
 
 /* --------------- contact ------------- */

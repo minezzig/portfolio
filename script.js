@@ -11,29 +11,51 @@ function closeMenu() {
 
 const projectsList = [
   {
-    name: "one",
-    stack: "javascript",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vel minima culpa nisi veniam quis repellendus mollitia sapiente cumque! Veniam repellendus ipsum hic iste fugiat accusantium odit quaerat quidem ipsa!",
+    name: "Periodic Tables",
+    tech: [
+      "html5",
+      "css3-alt",
+      "square-js",
+      "react",
+      "node-js",
+      "express",
+      "postgresql",
+    ],
+    description:
+      "This application, similar to OpenTable, allows restaurants to create and edit reservations as well as seat them in an configuration of tables. Parties can then be clear and marked as finished. Also allows reservations to be search by phone number",
+    link: "https://github.com/minezzig/starter-restaurant-reservation",
   },
   {
-    name: "two",
-    stack: "react",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vel minima culpa nisi veniam quis repellendus mollitia sapiente cumque! Veniam repellendus ipsum hic iste fugiat accusantium odit quaerat quidem ipsa!",
+    name: "Flashcard-o-matic",
+    tech: ["html5", "css3-alt", "square-js", "react"],
+    description:
+      "Front-end capstone project that showcases a react.js application. A simple web app that allows users to create decks, containing cards, as study material. Both decks and cards can be edited and deleted.",
+    link: "https://github.com/minezzig/flashcard",
   },
   {
-    name: "three",
-    stack: "css",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse vel minima culpa nisi veniam quis repellendus mollitia sapiente cumque! Veniam repellendus ipsum hic iste fugiat accusantium odit quaerat quidem ipsa!",
+    name: "Recipe Tracker",
+    tech: ["html5", "css3-alt", "square-js", "react"],
+    description:
+      "A React project that focuses on the creation of a CRUD application.  Emphasis on the use of useState() hook.",
+    link: "https://github.com/minezzig/recipe-tracking-app",
   },
 ];
 
 const content = projectsList.map((project) => {
-  const { name, stack, description } = project;
+  const { name, tech, description, link } = project;
+
+  const logos = tech.map((logo) => {
+    return `<i class="fa-brands fa-${logo}"></i>`;
+  });
+
   return ` 
     <div class="card">
       <h3>${name}</h3>
-      <p>${stack}</p>
-      <p>${description}</p>
+        ${logos.join("")} 
+      <p>${description}  </p>
+      <i class="fa-brands fa-square-github"></i
+    ><a href="${link}" target="_blank"
+      >View code on Github</a>
     </div>
     `;
 });
