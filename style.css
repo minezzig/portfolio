@@ -1,3 +1,7 @@
+a {
+  z-index: 1000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -238,6 +242,11 @@ h2 {
   overflow: hidden;
 }
 
+.card:hover {
+  box-shadow: 2px 2px black;
+  transform: translate(2px, 2px);
+}
+/*
 .card::after {
   content: "";
   width: 100%;
@@ -256,7 +265,7 @@ h2 {
   color: white;
   background: linear-gradient(lightcoral, white);
 }
-
+*/
 .card h3 {
   color: black;
   letter-spacing: 0.1em;

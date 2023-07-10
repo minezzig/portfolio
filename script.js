@@ -1,6 +1,10 @@
 const menu = document.getElementById("menu");
 const projects = document.getElementById("projects-list");
 
+fetch("projects.json")
+  .then((response) => response.json())
+  .then((data) => createProjectsList(data.projects));
+
 function openMenu() {
   menu.style.right = "0";
 }
@@ -9,7 +13,7 @@ function closeMenu() {
   menu.style.right = "-200px";
 }
 
-const projectsList = [
+/*const projectsList = [
   {
     name: "Periodic Tables",
     tech: [
@@ -22,7 +26,7 @@ const projectsList = [
       "postgresql",
     ],
     description:
-      "This application, similar to OpenTable, allows restaurants to create and edit reservations as well as seat them in an configuration of tables. Parties can then be clear and marked as finished. Also allows reservations to be search by phone number",
+      "This application, similar to OpenTable, allows restaurants to create and edit reservations as well as seat them in a configuration of tables. Parties can then be clear and marked as finished. Also allows reservations to be search by phone number",
     link: "https://github.com/minezzig/starter-restaurant-reservation",
   },
   {
@@ -40,15 +44,17 @@ const projectsList = [
     link: "https://github.com/minezzig/recipe-tracking-app",
   },
 ];
+*/
 
-const content = projectsList.map((project) => {
-  const { name, tech, description, link } = project;
+function createProjectsList(projectsList) {
+  const content = projectsList.map((project) => {
+    const { name, tech, description, link } = project;
 
-  const logos = tech.map((logo) => {
-    return `<i class="fa-brands fa-${logo}"></i>`;
-  });
+    const logos = tech.map((logo) => {
+      return `<i class="fa-brands fa-${logo}"></i>`;
+    });
 
-  return ` 
+    return ` 
     <div class="card">
       <h3>${name}</h3>
         ${logos.join("")} 
@@ -58,6 +64,8 @@ const content = projectsList.map((project) => {
       >View code on Github</a>
     </div>
     `;
-});
+  });
+  projects.innerHTML = content.join("");
+}
 
-projects.innerHTML = content.join("");
+
