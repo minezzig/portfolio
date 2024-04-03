@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,19 +16,23 @@
       src="https://kit.fontawesome.com/c82e315a12.js"
       crossorigin="anonymous"
     ></script>
-    <title>minezzi web developer</title>
+    <title>greg minezzi</title>
   </head>
   <body>
     <header>
-      <logo><a href="#hero">minezzi</a></logo>
+      <logo><a href="#hero">gm</a></logo>
       <nav>
         <ul class="nav-links" id="menu">
-          <li><a href="#about">about</a></li>
-          <li><a href="#projects">projects</a></li>
+          <li><a href="#about" onclick="closeMenu()">about</a></li>
+          <li><a href="#projects" onclick="closeMenu()">projects</a></li>
           <li>
-            <a href="https://www.linkedin.com/in/greg-minezzi/">resume</a>
+            <a
+              href="https://www.linkedin.com/in/greg-minezzi/"
+              onclick="closeMenu()"
+              >resume</a
+            >
           </li>
-          <li><a href="#contact">contact</a></li>
+          <li><a href="#contact" onclick="closeMenu()">contact</a></li>
           <span id="close" onclick="closeMenu()">X</span>
         </ul>
         <span id="hamburger" onclick="openMenu()"
@@ -42,13 +47,18 @@
       <div class="container">
         <div class="title">
           <div class="text">
-            <h1>greg <br />minezzi</h1>
+            <h1>greg</h1>
+            <h1>minezzi</h1>
             <p>developer | educator | traveler</p>
           </div>
-          <div class="art-container">
-            <div class="art"></div>
-            <span>hello.</span>
-          </div>
+          <dotlottie-player
+            class="lottie"
+            src="https://lottie.host/cc1869ab-7084-464a-bf0f-2d71d25d456a/CMdwUlou6M.json"
+            background="transparent"
+            speed="1"
+            loop
+            autoplay
+          ></dotlottie-player>
         </div>
       </div>
     </div>
@@ -57,16 +67,19 @@
     <div id="about">
       <div class="container">
         <div class="about-section">
-          <h2>What's your story?</h2>
-          <p>
-            So here's the section where I have to talk about myself. Okay. After
-            many years in Brooklyn, NY working in the vegan restaurant industry,
-            I decided to hit the road and explore the world full time. After
-            caring for a Jaguar in Bolivia, hiking the Himalayas, and ultimately
-            traversing all 7 continents, I decided it was time to stay aborad
-            for good. I settled down in Spain and have called it home ever
-            since.
-          </p>
+          <h2>about me</h2>
+          <div class="two-col">
+            <img src="./images/profile.jpg" />
+            <p>
+              So here's the section where I have to talk about myself. Okay.
+              After many years in Brooklyn, NY working in the vegan restaurant
+              industry, I decided to hit the road and explore the world full
+              time. After caring for a Jaguar in Bolivia, hiking the Himalayas,
+              and ultimately traversing all 7 continents, I decided it was time
+              to stay aborad for good. I settled down in Spain and have called
+              it home ever since.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -75,14 +88,7 @@
       <div class="container">
         <div class="projects-section">
           <h2>projects</h2>
-          <p>
-            I proudly pesent some of the projects I've worked on. Though not
-            much at the moment, I have many more in the works. The following
-            show off some of my work using React.js, JavaScript, HTML, CSS as
-            well as some backend work using node.js, express, and postgresSQL.
-            I'm particularly proud of "Periodic Tables" as it is a fullstack
-            application that combines my love of development and food :)
-          </p>
+          <p>Some of the stuff I've created.</p>
           <div id="projects-list">
             <!-- javascript file maps out all projects here -->
           </div>
@@ -144,8 +150,12 @@
         </div>
       </div>
     </div>
-
     <footer>©minezzi 2021</footer>
   </body>
-  <script type="text/javascript" src="script.js"></script>
+  <script
+    src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+    type="module"
+  ></script>
+  <script src="projects.js"></script>
+  <script src="index.js"></script>
 </html>
