@@ -197,6 +197,11 @@ h2 {
   width: 200px;
   border: 2px solid black;
   box-shadow: -3px 3px black;
+  transition: 0.3s ease-in-out;
+}
+
+.about-section .img-container:hover img {
+  transform: rotateY(180deg);
 }
 /* --------------- projects ------------- */
 #projects {
@@ -438,6 +443,10 @@ footer {
 
   .lottie {
     max-width: 400px;
+    transition: .3s ease-in-out;
+  }
+  .lottie:hover{
+    scale: 1.1;
   }
 
   .two-col {
@@ -459,12 +468,12 @@ footer {
     padding: 20px;
     transition: 0.3s ease-in-out;
   }
-  
+
   .card:hover .description {
     opacity: 1;
     translate: none;
   }
-  
+
   .card .links-container {
     float: right;
     padding: 5px 10px;
