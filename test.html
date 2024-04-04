@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 200vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #container {
+        max-width: 100vw;
+      }
+
+      h1 {
+        transition: transform 0.2s linear;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="container">
+        <h1 id="first">
+         ABOUT ME
+        </h1>
+        <h1 id="second">
+            ABOUT ME
+           </h1>
+        </div>
+  </body>
+  <script>
+    const first = document.getElementById("first");
+    const second = document.getElementById("second")
+
+    const container = document.getElementById("container");
+    const rect = container.getBoundingClientRect();
+
+    const animate = (element, position) => {
+      element.style.transform = `translateX(${position}px)`;
+      element.style.transform = `translateX(${position}px)`;
+    };
+
+    document.addEventListener("scroll", function (e) {
+      lastKnownScrollPosition = window.scrollY;
+      window.requestAnimationFrame(function () {
+        animate(first, lastKnownScrollPosition * 0.2);
+        animate(second, lastKnownScrollPosition * -0.2);
+      });
+    });
+  </script>
+</html>

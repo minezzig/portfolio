@@ -11,6 +11,7 @@ html {
 body {
   background-color: white;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 header {
@@ -103,16 +104,19 @@ logo {
   height: 100vh;
   width: 100%;
   background: #90adc6;
+  overflow: hidden;
 }
 .title {
-  height: 100%;
-  width: 100%;
   color: #ffffff;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+}
+
+.transition{
+  transition: all 0.2s linear;
 }
 
 .title .text h1 {
@@ -120,47 +124,24 @@ logo {
   font-size: 100px;
   font-family: "Fjalla One", sans-serif;
   text-shadow: -5px 5px black;
-  transition: all 0.5s ease-in-out;
+  /* transition: letter-spacing 0.5s ease-in-out; */
   margin-top: 20px;
 }
 
-.title .text:hover h1 {
+/* .title .text:hover h1 {
   transform: translate(-5px, -5px);
   letter-spacing: 5px;
-}
+} */
 
-.title .text p {
+/* .title .text p {
   color: black;
   margin-left: 5px;
   transition: transform 0.5s ease-in-out;
-}
+} */
 
-.title .text:hover p {
+/* .title .text:hover p {
   transform: translateX(21%);
-}
-
-@keyframes fadein {
-  0%,
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes rotate {
-  0%,
-  100% {
-    border-radius: 50%;
-    background-color: #9dd1c0;
-  }
-  50% {
-    transform: rotate(270deg);
-    border-radius: 0%;
-    background-color: lightcoral;
-  }
-}
+} */
 
 /* --------------- about ------------- */
 #about {
@@ -221,6 +202,9 @@ h2 {
   color: white;
   padding-top: 10px;
 }
+#projects-title {
+  text-align: right;
+}
 
 #projects-list {
   margin-top: 30px;
@@ -248,7 +232,7 @@ h2 {
 
 .card h3 {
   color: black;
-  font-size: 28px;
+  font-size: 20px;
 }
 
 .card .img-container {
@@ -272,7 +256,7 @@ h2 {
 
 .card .links-container {
   float: right;
-  padding: 5px 10px;
+  padding: 5px 0;
 }
 
 .card a {
@@ -363,7 +347,7 @@ button {
   border: 2px solid black;
   margin: 5px;
   border-radius: 10px;
-  transition: all 0.3s;
+  transition: all 0.3s ease-in-out;
   box-shadow: -3px 3px black;
 }
 
@@ -396,7 +380,7 @@ footer {
   font-size: 3em;
   color: #e9eaec;
   text-shadow: -3px 3px black;
-  transition: all ease;
+  transition: all 0.3s ease-in-out;
 }
 
 .contact-links i:hover {
@@ -408,10 +392,11 @@ footer {
 @media all and (min-width: 900px) {
   .title {
     flex-direction: row;
+    margin-top: 10%;
   }
 }
 
-@media all and (min-width: 700px) {
+@media all and (min-width: 768px) {
   logo {
     font-size: 48px;
   }
@@ -433,19 +418,19 @@ footer {
     display: none;
   }
 
-  .title .text h1 {
+  /* .title .text h1 {
     font-size: 128px;
-  }
+  } */
 
-  .title .text:hover p {
+  /* .title .text:hover p {
     transform: translateX(37%);
-  }
+  } */
 
   .lottie {
     max-width: 400px;
-    transition: .3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
-  .lottie:hover{
+  .lottie:hover {
     scale: 1.1;
   }
 
