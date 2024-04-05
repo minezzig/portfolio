@@ -331,11 +331,13 @@ h2 {
 .contact-container {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .login-box {
   padding: 40px;
-  margin-bottom: 40px;
+  margin: 40px 0;
   background: #90adc6;
   box-sizing: border-box;
   box-shadow: -5px 5px black;
@@ -387,11 +389,11 @@ textarea:valid ~ label {
 button {
   background-color: #9dd1c0;
   color: black;
-  padding: 5px 20px;
+  padding: 10px 30px;
   border: 2px solid black;
   margin: 5px;
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
   box-shadow: -3px 3px black;
 }
 
@@ -403,16 +405,6 @@ button:hover {
 button:active {
   transform: translate(-3px, 3px);
   box-shadow: 0 0 black;
-}
-/* --------- footer ---------*/
-
-footer {
-  background-color: black;
-  color: white;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .contact-container .contact-links {
@@ -431,6 +423,18 @@ footer {
   transform: translate(2px, 2px);
   text-shadow: 1px 1px black;
 }
+
+/* --------- footer ---------*/
+
+footer {
+  background-color: black;
+  color: white;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* ---------------------------   media queries--------------------- */
 @media all and (min-width: 900px) {
@@ -509,19 +513,14 @@ footer {
   }
 
   .contact-container {
-    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
   }
 
   .login-box {
     min-width: 500px;
-    margin-bottom: none;
   }
 
-  .contact-links {
-    margin: 0 auto;
-  }
-
-  .contact-links p {
-    margin-bottom: 10px;
-  }
 }
