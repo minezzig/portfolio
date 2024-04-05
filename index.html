@@ -79,25 +79,28 @@
               <p>
                 I'm Greg, an anthropologist turned web developer with a passion
                 for food. From New York to Spain, a curiosity for life's
-                experiences has taken me across the globe; riding motorbikes
-                in Asia 🛵, chilling with penguins in Antarctica 🇦🇶, and caring for
-                majestic jaguars in the Amazon 🐆. Along the way, I've
-                learned Spanish, become a certified scuba diver, and continued to
+                experiences has taken me across the globe; riding motorbikes in
+                Asia 🛵, chilling with penguins in Antarctica 🇦🇶, and caring for
+                majestic jaguars in the Amazon 🐆. Along the way, I've learned
+                Spanish, become a certified scuba diver, and continued to
                 indulge in my love for plant-based cuisine 🌱.
-              </p><br/>
+              </p>
+              <br />
               <p>
                 My journey hasn't just been about exploration—it's been about
                 adaptation and learning. Living in a variety of languages and
                 cultures has taught me how to quickly absorb new information and
-                adapt to different environments. This skill has been evident in my
-                teaching career, where I seamlessly transitioned to effectively
-                communicate, educate, and deliver.
-              </p><br/>
+                adapt to different environments. This skill has been evident in
+                my teaching career, where I seamlessly transitioned to
+                effectively communicate, educate, and deliver.
+              </p>
+              <br />
               <p>
-                When I'm not coding, you'll find me walking endless miles
-                around a new city 🚶🏼‍♂️, soaking up the sun ☀️, or cycling through the concrete jungle of
-                Madrid 🚲.
-              </p><br>
+                When I'm not coding, you'll find me walking endless miles around
+                a new city 🚶🏼‍♂️, soaking up the sun ☀️, or cycling through the
+                concrete jungle of Madrid 🚲.
+              </p>
+              <br />
               <p>Ready to embark on the next development adventure together?</p>
             </div>
           </div>
@@ -110,7 +113,17 @@
       <div class="container">
         <div class="projects-section">
           <h2 id="projects-title" class="transition">projects</h2>
-          <p>Some of the stuff I've created.</p>
+          <p>
+            Some of the stuff I've created. Notice any recurring themes?  Food,
+            geography, sun...
+          </p><br>
+          <p>
+            Projects created using <span>HTML</span>, <span>CSS</span>, <span>Javascript</span>, and <span>React</span>. I experiment
+            with <span>Tailwind</span> too. I also use <span>Node</span>, <span>Express</span>, and <span>Postgres</span>. I've dabbled
+            with <span>Neon</span>, <span>ElephantSQL</span>, <span>Drizzle</span>, and <span>Knex</span>. Currently
+            working on <span>Next.js</span> and <span>Typescript</span>. 
+          </p><br>
+          <p>Upcomming: mobile development.  <span>Swift</span> or <span>React Native</span>!</p>
           <div id="projects-list">
             <!-- javascript file maps out all projects here -->
           </div>
@@ -130,16 +143,21 @@
                 method="POST"
               >
                 <div class="user-box">
-                  <input type="text" name="name" required=" " />
-                  <label>name</label>
+                  <input type="text" id="name" name="name" required=" " />
+                  <label for="name">name</label>
                 </div>
                 <div class="user-box">
-                  <input type="email" name="email" required=" " />
-                  <label>email</label>
+                  <input type="email" id="email" name="email" required=" " />
+                  <label for="email">email</label>
                 </div>
                 <div class="user-box">
-                  <textarea name="comment" required=" " rows="1"></textarea>
-                  <label>comment</label>
+                  <textarea
+                    name="comment"
+                    id="comment"
+                    required=" "
+                    rows="1"
+                  ></textarea>
+                  <label for="comment">comment</label>
                 </div>
                 <input
                   type="hidden"
