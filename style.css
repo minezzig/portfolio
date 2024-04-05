@@ -105,6 +105,9 @@ logo {
   width: 100%;
   background: #90adc6;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .title {
   color: #ffffff;
@@ -142,6 +145,42 @@ logo {
 /* .title .text:hover p {
   transform: translateX(21%);
 } */
+.arrow-container {
+  animation: .8s infinite alternate bounce;
+  position: absolute;
+  bottom: 50px;
+}
+.arrow {
+  width: 2px;
+  background: rgba(255, 255, 255, .5);
+  height: 50px;
+  position: relative;
+}
+.arrow:before, .arrow:after {
+  content: ""; 
+  position: absolute;
+  background: rgba(255, 255, 255, .5);
+  width: 2px;
+  height: 20px;
+  bottom: 0;
+  transform-origin: bottom;
+}
+
+.arrow:before {
+  rotate: -45deg;
+}
+
+.arrow:after {
+  rotate: 45deg;
+}
+@keyframes bounce {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: 0 -50px;
+  }
+}
 
 /* --------------- about ------------- */
 #about {
