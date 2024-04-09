@@ -11,7 +11,7 @@ const projects = [
       "postgresql",
     ],
     description:
-    "Keep track of all of your restaurant's reservations. Create, edit, and search reservations and also seat customers when the come in to dine.",
+      "Keep track of all of your restaurant's reservations. Create, edit, and search reservations and also seat customers when the come in to dine.",
     image: "./images/periodic-tables.jpg",
     github: "https://github.com/minezzig/starter-restaurant-reservation",
     live: "https://restaurant-reservation-minezzi.vercel.app/",
@@ -68,5 +68,13 @@ const projects = [
     image: "./images/flashcard.jpg",
     github: "https://github.com/minezzig/flashcard",
     live: "https://flashcard-app-minezzi.vercel.app/",
+  },
+  {
+    name: "Calculator",
+    description:
+      "A quick and easy project using React and Tailwind to create a functioning calculator.",
+    image: "./images/calculator.jpg",
+    github: "https://github.com/minezzig/calculator",
+    live: "https://calculator-app-minezzi.vercel.app/",
   },
 ];

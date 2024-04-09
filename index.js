@@ -55,7 +55,8 @@ const contactDiv = document.getElementById("contact");
 const contact = document.getElementById("contact-title");
 
 const grow = (element, position) => {
-  element.style.fontSize = `${position + 80}px`;
+  position += 80;
+  element.style.fontSize = `${position}px`;
   element.style.opacity = `${1 - position / 500}`;
 };
 
