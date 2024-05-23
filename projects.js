@@ -1,5 +1,12 @@
 const projects = [
   {
+    name: "Web Pages",
+    description:
+      "A variety of landing pages and web apps created for FrontendMentor.com",
+    image: "https://frontendmentor-gm.vercel.app/bookmark-landing-page-master/./images/screenshots/desktop1.png",
+    github: "https://github.com/minezzig/frontend-mentor",
+    live: "https://frontendmentor-gm.vercel.app",
+  },{
     name: "Periodic Tables",
     tech: [
       "html5",
@@ -77,4 +84,5 @@ const projects = [
     github: "https://github.com/minezzig/calculator",
     live: "https://calculator-app-minezzi.vercel.app/",
   },
+
 ];
