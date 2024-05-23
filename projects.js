@@ -82,7 +82,7 @@ const projects = [
       "A quick and easy project using React and Tailwind to create a functioning calculator.",
     image: "./images/calculator.jpg",
     github: "https://github.com/minezzig/calculator",
-    live: "https://calculator-app-minezzi.vercel.app/",
+    live: "https://calculator-gm.vercel.app/",
   },
 
 ];
