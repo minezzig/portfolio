@@ -1,6 +1,6 @@
 const projects = [
   {
-    name: "Web Pages",
+    name: "Frontend Mentor",
     description:
       "A variety of landing pages and web apps created for FrontendMentor.com",
     image: "https://frontendmentor-gm.vercel.app/bookmark-landing-page-master/./images/screenshots/desktop1.png",
