@@ -3,10 +3,12 @@ const projects = [
     name: "Frontend Mentor",
     description:
       "A variety of landing pages and web apps created for FrontendMentor.com",
-    image: "https://frontendmentor-gm.vercel.app/bookmark-landing-page-master/./images/screenshots/desktop1.png",
+    image:
+      "https://frontendmentor-gm.vercel.app/bookmark-landing-page-master/./images/screenshots/desktop1.png",
     github: "https://github.com/minezzig/frontend-mentor",
     live: "https://frontendmentor-gm.vercel.app",
-  },{
+  },
+  {
     name: "Periodic Tables",
     tech: [
       "html5",
@@ -22,6 +24,13 @@ const projects = [
     image: "./images/periodic-tables.jpg",
     github: "https://github.com/minezzig/starter-restaurant-reservation",
     live: "https://restaurant-reservation-minezzi.vercel.app/",
+  },
+  {
+    name: "CSS Battle",
+    description: "Images and designs created solely with CSS",
+    image: "./images/cssbattle.jpg",
+    github: "https://github.com/minezzig/cssbattle",
+    live: "https://github.com/minezzig/cssbattle",
   },
   {
     name: "Flag Frenzy",
@@ -40,15 +49,7 @@ const projects = [
     github: "https://github.com/minezzig/flag-game",
     live: "https://flagfrenzy-gm.vercel.app/",
   },
-  {
-    name: "Lively Weather",
-    tech: ["html5", "css3-alt", "css3-alt", "TAILWIND", "square-js", "react"],
-    description:
-      "Search for the current temperature and weather conditions by city name.",
-    image: "./images/weather.jpg",
-    github: "https://github.com/minezzig/weather",
-    live: "https://livelyweather-gm.vercel.app/",
-  },
+
   {
     name: "stickyNotes",
     tech: [
@@ -68,6 +69,15 @@ const projects = [
     live: "https://stickynotes-gm.vercel.app/",
   },
   {
+    name: "Lively Weather",
+    tech: ["html5", "css3-alt", "css3-alt", "TAILWIND", "square-js", "react"],
+    description:
+      "Search for the current temperature and weather conditions by city name.",
+    image: "./images/weather.jpg",
+    github: "https://github.com/minezzig/weather",
+    live: "https://livelyweather-gm.vercel.app/",
+  },
+  {
     name: "Flashcard-o-matic",
     tech: ["html5", "css3-alt", "square-js", "react"],
     description:
@@ -84,5 +94,4 @@ const projects = [
     github: "https://github.com/minezzig/calculator",
     live: "https://calculator-gm.vercel.app/",
   },
-
 ];
