@@ -9,6 +9,15 @@ const projects = [
     live: "https://frontendmentor-gm.vercel.app",
   },
   {
+    name: "Yoga Website",
+    description:
+      "A personal homepage for yoga instructor with dual language display. Design, logo, and images designed by me.",
+    image:
+      "images/eduyoga.jpg",
+    github: "https://github.com/minezzig/edu-yoga",
+    live: "https://eduyoga.vercel.app",
+  },
+  {
     name: "Periodic Tables",
     tech: [
       "html5",
