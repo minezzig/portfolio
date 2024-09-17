@@ -103,7 +103,7 @@ logo {
 #hero .container {
   height: 100vh;
   width: 100%;
-  background: #90adc6;
+  background: linear-gradient(#73b1e7,#90adc6);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -186,7 +186,7 @@ logo {
 
 /* --------------- about ------------- */
 #about {
-  background: #9dd1c0;
+  background: linear-gradient(#90e9cb,#9dd1c0);
   position: relative;
 }
 #about::before {
@@ -227,7 +227,7 @@ h2 {
 }
 /* --------------- projects ------------- */
 #projects {
-  background-color: #e9eaec;
+  background: linear-gradient(#fbfcff,#e9eaec);
   position: relative;
 }
 #projects::before {
@@ -310,7 +310,7 @@ h2 {
 
 /* --------------- contact ------------- */
 #contact {
-  background-color: lightcoral;
+  background: linear-gradient(rgb(233, 118, 118),lightcoral);
   position: relative;
 }
 
