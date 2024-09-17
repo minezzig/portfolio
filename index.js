@@ -23,11 +23,13 @@ function createProjectsList(projectsList) {
 
     return ` 
     <div class="card">
-      <div class="title-container">
-        <h3>${name}</h3> <a href="${live}" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
-      </div>
+      <a href="${live}" target="_blank">
+        <div class="title-container">
+          <h3>${name}</h3><i class="fa-solid fa-up-right-from-square"></i>
+        </div>
+      </a>
       <div class="img-container">
-        <img src="${image}" alt="${name}" />
+        <a href="${live}" target="_blank"><img src="${image}" alt="${name}" /></a>
       </div>
       <div class="description">
         <div>${description}</div>
@@ -64,7 +66,7 @@ const scroll = (div, element, position, direction) => {
   const divPosition = div.offsetTop;
   const adjPosition = position + Math.floor(window.innerHeight * 0.75);
   const speed = window.innerWidth * 0.0009;
-  console.log(speed)
+  console.log(speed);
   if (adjPosition > divPosition) {
     element.style.transform = `translateX(${
       (adjPosition - divPosition) * speed * direction
