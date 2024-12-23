@@ -132,3 +132,6 @@ async function onSubmit(e) {
    `;
   }
 }
+
+const year = document.getElementById("year")
+year.innerHTML = new Date().getFullYear();

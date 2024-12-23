@@ -435,6 +435,10 @@ footer {
   justify-content: center;
 }
 
+#year {
+  margin-inline: 5px;
+}
+
 
 /* ---------------------------   media queries--------------------- */
 @media all and (min-width: 900px) {
