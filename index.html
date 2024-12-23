@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Fjalla+One&family=Fredericka+the+Great&family=Londrina+Shadow&family=Montserrat&family=Nixie+One&family=Poiret+One&family=Poppins&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://kit.fontawesome.com/c82e315a12.js"
       crossorigin="anonymous"
@@ -47,20 +48,20 @@
     <!-- --------------hero --------------->
     <div id="hero">
       <div class="container">
-        <div class="title">
+        <div class="title" data-aos="zoom-in" data-aos-duration="1000">
+          <dotlottie-player
+          class="lottie"
+          src="https://lottie.host/cc1869ab-7084-464a-bf0f-2d71d25d456a/CMdwUlou6M.json"
+          background="transparent"
+          speed="1"
+          loop
+          autoplay
+        ></dotlottie-player>
           <div class="text">
             <h1 id="first" class="transition">greg</h1>
             <h1 id="last" class="transition">minezzi</h1>
             <p id="roles" class="transition">developer | educator | traveler</p>
           </div>
-          <dotlottie-player
-            class="lottie"
-            src="https://lottie.host/cc1869ab-7084-464a-bf0f-2d71d25d456a/CMdwUlou6M.json"
-            background="transparent"
-            speed="1"
-            loop
-            autoplay
-          ></dotlottie-player>
         </div>
         <div class="arrow-container">
           <div class="arrow"></div>
@@ -71,7 +72,7 @@
     <!-- ------------about------------- -->
     <div id="about">
       <div class="container">
-        <div class="about-section">
+        <div class="about-section" data-aos="fade-right">
           <h2 id="about-title" class="transition">about</h2>
           <div class="two-col">
             <div class="img-container">
@@ -144,7 +145,7 @@
     <!-- ------------contact------------- -->
     <div id="contact">
       <div class="container">
-        <div class="contact-section">
+        <div class="contact-section" data-aos="fade-right">
           <h2 id="contact-title" class="transition">CONTACT</h2>
 
           <div class="contact-container">
@@ -199,11 +200,15 @@
       </div>
     </div>
     <footer>©minezzi 2021</footer>
-  </body>
-  <script
+    <script
     src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
     type="module"
-  ></script>
-  <script src="projects.js"></script>
-  <script src="index.js"></script>
+    ></script>
+    <script src="projects.js"></script>
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
