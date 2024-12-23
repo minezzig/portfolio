@@ -84,3 +84,58 @@ document.addEventListener("scroll", function (e) {
     scroll(contactDiv, contact, position, 1);
   });
 });
+
+
+// Contact form submission
+const contactContainer = document.getElementById("contact-div");
+const form = document.getElementById("form");
+// on submit...
+form.addEventListener("submit", onSubmit);
+
+// action taken on submit
+async function onSubmit(e) {
+  e.preventDefault();
+
+  // collect data and create object
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const response = await fetch("https://submit-form.com/Bk17yuvKG", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        ...data,
+        _email: {
+          from: "MINEZZI portfolio",
+          subject: "Portfolio Contact",
+        },
+      }),
+    });
+
+    if (response.ok) {
+      contactContainer.innerHTML = `
+      <div class="flex p-10 flex-col items-center justify-center bg-white rounded-3xl shadow-2xl">
+          <div class="text-4xl">Thanks, ${data.name}!</div>
+          <div>I'll get back to you as soon as possible!</div>
+      </div>`;
+    } else {
+      contactContainer.innerHTML = `
+        <div class="flex p-10 flex-col items-center justify-center bg-white rounded-3xl shadow-2xl">
+            <div class="text-4xl">An error occured!</div>
+
+        </div>
+   `;
+    }
+  } catch (error) {
+    contactContainer.innerHTML = `
+        <div class="flex p-10 flex-col items-center justify-center bg-white rounded-3xl shadow-2xl">
+            <div class="text-4xl">An error occured!</div>
+
+        </div>
+   `;
+  }
+}
